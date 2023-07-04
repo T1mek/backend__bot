@@ -4,11 +4,14 @@ import { NestExpressApplication } from '@nestjs/platform-express';
 import { join } from 'path';
 
 async function bootstrap() {
-  const app = await NestFactory.create<NestExpressApplication>(AppModule,{
+  const app = await NestFactory.create<NestExpressApplication>(AppModule, {
     cors: true,
   });
   app.useStaticAssets(join(__dirname, '..', 'assets'));
   await app.listen(3000);
 }
 
-bootstrap()
+export default function serverApp() {
+  bootstrap();
+  console.log('ddd');
+}
