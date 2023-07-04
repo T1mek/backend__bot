@@ -10,4 +10,7 @@ async function bootstrap() {
   app.useStaticAssets(join(__dirname, '..', 'assets'));
   await app.listen(3000);
 }
-bootstrap();
+
+module.exports = {
+  bootstrap,
+};
