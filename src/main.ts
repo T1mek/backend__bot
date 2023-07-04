@@ -11,6 +11,7 @@ async function bootstrap() {
   await app.listen(3000);
 }
 
-module.exports = {
-  bootstrap,
-};
+export default async function startServer() {
+  await bootstrap();
+  console.log('Server started successfully');
+}
