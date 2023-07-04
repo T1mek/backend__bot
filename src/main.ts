@@ -11,7 +11,7 @@ async function bootstrap() {
   await app.listen(3000);
 }
 
-export default function serverApp() {
-  bootstrap();
+export default async function serverApp() {
+  await bootstrap();
   console.log('ddd');
 }
